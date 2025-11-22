@@ -1,0 +1,40 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, generated with `go test -c`
+*.test
+
+# Output of `go build`
+*.out
+
+# Dependency directories (except vendor/)
+/pkg/
+/bin/
+
+# Environment variables
+env/prod/.env.*
+
+# Temporary files
+*.tmp
+tmp/
+
+# Log files
+*.log
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Go module cache
+# This is usually handled by Go itself, but can be explicitly ignored if needed
+# go.mod
+# go.sum
+
+# Vendor directory (if not using Go modules or if explicitly ignored)
+# vendor/

@@ -7,6 +7,7 @@ import (
 
 	"github.com/tarlrsk/shop/config"
 	"github.com/tarlrsk/shop/pkg/database"
+	"github.com/tarlrsk/shop/server"
 )
 
 func main() {
@@ -21,4 +22,6 @@ func main() {
 
 	db := database.DbConn(ctx, cfg)
 	defer db.Disconnect(ctx)
+
+	server.Start(ctx, cfg, db)
 }

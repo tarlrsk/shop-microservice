@@ -1,17 +1,17 @@
 package inventoryhandler
 
 import (
-	itemusecase "github.com/tarlrsk/shop/modules/item/itemUsecase"
+	inventoryusecase "github.com/tarlrsk/shop/modules/inventory/inventoryUseCase"
 )
 
 type (
-	itemGrpcHandler struct {
-		itemUsecase itemusecase.ItemUseCaseService
+	inventoryGrpcHandler struct {
+		inventoryUsecase inventoryusecase.InventoryUseCaseService
 	}
 )
 
-func NewItemGrpcHandler(itemUsecase itemusecase.ItemUseCaseService) *itemGrpcHandler {
-	return &itemGrpcHandler{
-		itemUsecase: itemUsecase,
+func NewInventoryGrpcHandler(inventoryUsecase inventoryusecase.InventoryUseCaseService) *inventoryGrpcHandler {
+	return &inventoryGrpcHandler{
+		inventoryUsecase: inventoryUsecase,
 	}
 }

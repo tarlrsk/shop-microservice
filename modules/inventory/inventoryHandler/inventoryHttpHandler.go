@@ -2,22 +2,22 @@ package inventoryhandler
 
 import (
 	"github.com/tarlrsk/shop/config"
-	itemusecase "github.com/tarlrsk/shop/modules/item/itemUsecase"
+	inventoryusecase "github.com/tarlrsk/shop/modules/inventory/inventoryUseCase"
 )
 
 type (
-	ItemHttpHandlerService interface {
+	InventoryHttpHandlerService interface {
 	}
 
-	itemHttpHandler struct {
-		cfg         *config.Config
-		itemUseCase itemusecase.ItemUseCaseService
+	inventoryHttpHandler struct {
+		cfg              *config.Config
+		inventoryUseCase inventoryusecase.InventoryUseCaseService
 	}
 )
 
-func NewItemHttpHandler(cfg *config.Config, itemUseCase itemusecase.ItemUseCaseService) ItemHttpHandlerService {
-	return &itemHttpHandler{
-		cfg:         cfg,
-		itemUseCase: itemUseCase,
+func NewInventoryHttpHandler(cfg *config.Config, inventoryUseCase inventoryusecase.InventoryUseCaseService) InventoryHttpHandlerService {
+	return &inventoryHttpHandler{
+		cfg:              cfg,
+		inventoryUseCase: inventoryUseCase,
 	}
 }

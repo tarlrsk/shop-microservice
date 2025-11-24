@@ -10,10 +10,6 @@
 # Output of `go build`
 *.out
 
-# Dependency directories (except vendor/)
-/pkg/
-/bin/
-
 # Environment variables
 env/prod/.env.*
 
